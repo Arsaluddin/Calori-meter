@@ -6,8 +6,8 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 //Routes
-const calori = require('./routes/caloriroutes');
-const users = require('./routes/usersroutes');
+const calori = require('./routes/caloriroutes.js');
+const users = require('./routes/usersroutes.js');
 
 require("dotenv").config();
 
