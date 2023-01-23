@@ -6,8 +6,7 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 //Routes
-const calori = require('./routes/caloriroutes.js');
-const users = require('./routes/usersroutes.js');
+
 
 require("dotenv").config();
 
@@ -16,8 +15,7 @@ const port = process.env.port || 5000;
 
 app.use(express.json());
 app.use(cors());
-app.use("/calori",calori);
-app.use("/users",users);
+
 mongoose.set('strictQuery', false);
 
 
@@ -33,14 +31,14 @@ mongoose.connect(connection,{
         console.log("server is running")
      )
    )
-.catch((error) => console.error("error"));
+.catch((error) => console.error("0000"));
 
 // //Routes
-// const calori = require('./routes/caloriroutes');
-// const users = require('./routes/usersroutes');
+const calori = require('./routes/caloriroutes');
+const users = require('./routes/usersroutes');
 
-// app.use("/calori",calori);
-// app.use("/users",users);
+app.use("/calori",calori);
+app.use("/users",users);
 
 
 
