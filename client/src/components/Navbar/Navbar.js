@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-const Navbar = () => {
+function Navbar  ()  {
 
     return (
         <>
-        <h1>arsal</h1>
+        
            <nav>
              <div className="container">
                 <Link to="/"></Link>

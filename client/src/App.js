@@ -1,16 +1,18 @@
-import {BrowserRouter , Routes , Route} from "react-router-dom"
+import {BrowserRouter as Router , Routes , Route} from "react-router-dom";
 import './App.css';
-import Navbar from "./components/Navbar/Navbar.js";
+import React from "react";
+import Navbar from "../src/components/Navbar";
 import AddFood from "./components/AddFood/Addfood.js";
 import EditFood from "./components/EditFood";
 import DisplayFood from "./components/DisplayFoodlist";
 import AddUser from "./components/AddUser";
 
 
-const App = () => {
+function App  ()  {
   return (
       <>
-        <BrowserRouter>
+      
+        <Router>
           <Navbar/>
           <br/>
           <Routes>
@@ -19,7 +21,7 @@ const App = () => {
             <Route path="/create" element={<AddFood/>} />
             <Route path="/user" element={<AddUser/>} />
           </Routes>  
-        </BrowserRouter>       
+        </Router>       
 
       </>
   );
