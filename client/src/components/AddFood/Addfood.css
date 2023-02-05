@@ -9,12 +9,19 @@
 }
 .user-name{
     margin: 20px;
+    display: flex;
+    flex-direction: column;
 }
 .food-info{
+    display: flex;
+    flex-direction: column;
     margin: 20px;
+
 }
 .calories{
     margin: 20px;
+    display: flex;
+    flex-direction: column;
 }
 .Date{
     display: flex;
