@@ -19,7 +19,7 @@ function App  ()  {
             <Route path="/" element={<DisplayFood/>} />
             <Route path="/edit/:id" element={<EditFood/>} />
             <Route path="/create" element={<AddFood/>} />
-            <Route path="/user" element={<AddUser/>} />
+            <Route path="/users" element={<AddUser/>} />
           </Routes>  
         </Router>       
 

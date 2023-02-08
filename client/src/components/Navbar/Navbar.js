@@ -22,7 +22,7 @@ function Navbar  ()  {
                     <Link to="/create">
                        <button className="btn"> ➕Add food</button>
                     </Link>
-                    <Link to="/user">
+                    <Link to="/users">
                        <button className="btn">➕ Add user</button>
                     </Link>
                 </div>

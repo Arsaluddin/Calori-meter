@@ -22,6 +22,7 @@ const Addfood = () => {
       .get("http://localhost:5000/users/")
       .then((res) => {
           if(res.data.length > 0){
+            console.log(res.data);
             setUsers(res.data.map((user) => user.username));
             setUsername(res.data[0].username);
           }
@@ -83,7 +84,7 @@ const Addfood = () => {
                      
                      <div className="user-name">
                       <label>🤵user Name</label>
-                      <select
+                      {/* <select
                         ref={userInputRef}
                         required
                         value={username}
@@ -98,7 +99,8 @@ const Addfood = () => {
                            )
                        })}
 
-                      </select>
+                      </select> */}
+                      <input value={username} onChange={handleUsername}></input>
                      </div>
                      <div className="food-info">
                       <label>🥗 food info</label>

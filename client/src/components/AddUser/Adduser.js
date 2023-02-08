@@ -18,9 +18,10 @@ const handleSubmit = (e) => {
       };
       console.log(user);
       axios
-      .post("http://localhost:5000/users/add",user)
+      .post("http://localhost:5000/users/",user)
       .then((res) => console.log(res.data));
       setUsername("");
+      
 }
 
 
