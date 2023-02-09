@@ -15,7 +15,7 @@ const Delayed = ({children, waitBefore=4500}) => {
 }
 
 
-const userchart = () => {
+const Userchart = () => {
 
     const [chartData,setchartData] = useState({});
 
@@ -86,4 +86,4 @@ const userchart = () => {
     )
 }
 
-export default userchart;
+export default Userchart;
