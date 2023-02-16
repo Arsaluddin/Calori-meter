@@ -4,14 +4,14 @@ import { Bar } from "react-chartjs-2";
 
 
 
-const Delayed = ({children,waitbefore=4500}) => {
+const Delayed = ({children,waitbefore=6000}) => {
     const [isShown,setIsShown] = useState(false); 
 
-    useEffect(() => {
-        setTimeout(() => {
-            setIsShown(true);
-        },waitbefore)
-    },[waitbefore]);
+    // useEffect(() => {
+    //     // setTimeout(() => {
+    //         setIsShown(true);
+    //     // },waitbefore)
+    // },[]);
 
     return isShown ? children : null;
 }
@@ -57,9 +57,9 @@ const Caloriechart = () => {
             }); 
     }
 
-    useEffect(() => {
-        getData();
-    },[]);
+    // useEffect(() => {
+    //     getData();
+    // },[]);
 
     return (
         <>

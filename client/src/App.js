@@ -11,7 +11,7 @@ import AddUser from "./components/AddUser";
 function App  ()  {
   return (
       <>
-      
+      <React.Fragment>
         <Router>
           <Navbar/>
           <br/>
@@ -21,7 +21,8 @@ function App  ()  {
             <Route path="/create" element={<AddFood/>} />
             <Route path="/users" element={<AddUser/>} />
           </Routes>  
-        </Router>       
+        </Router>   
+      </React.Fragment>      
 
       </>
   );

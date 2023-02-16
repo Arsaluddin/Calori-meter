@@ -37,7 +37,7 @@ mongoose.connect(connection,{
 const calori = require('./routes/caloriroutes');
 const users = require('./routes/usersroutes');
 
-app.use("/calori",calori);
+app.use("/calorie",calori);
 app.use("/users",users);
 
 

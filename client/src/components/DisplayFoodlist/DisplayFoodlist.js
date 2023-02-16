@@ -35,36 +35,39 @@ const FoodTrack = (props) => {
 const DisplayFood = () => {
     const [foods,setFoods] = useState([]);
 
-    useEffect(() => {
-        axios
-           .get("http://localhost:5000/calorie/")
-           .then((res) => {
-            setFoods(res.data);
-           })
-           .catch((err) => {
-               console.log(err);
-           });
-    },[]);
+
+    const mealList = () => {
+      return foods && foods.map((currentmeal) => {
+          return (
+              <FoodTrack
+               meal={currentmeal}
+               deleteMeal={deleteMeal}
+               key={currentmeal._id}
+              />
+          );
+      });
+  };
+
+    // useEffect(async() => {
+    //    await axios
+    //        .get("http://localhost:5000/calorie/")
+    //        .then((res) => {
+    //         setFoods(res.data);
+    //        })
+    //        .catch((err) => {
+    //            console.log(err);
+    //        });
+    // },[]);
 
     const deleteMeal = (id) => {
         axios
            .delete("http://localhost:5000/calorie/" + id).then((res) => {
                 console.log(res.data);
            });
-           setFoods(foods.filter((el) => el._id !==id));
+           setFoods(foods && foods.filter((el) => el._id !==id));
     }
 
-    const mealList = () => {
-        return foods.map((currentmeal) => {
-            return (
-                <FoodTrack
-                 meal={currentmeal}
-                 deleteMeal={deleteMeal}
-                 key={currentmeal._id}
-                />
-            );
-        });
-    };
+    
 
     return (
         <>

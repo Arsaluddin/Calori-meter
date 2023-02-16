@@ -2,14 +2,14 @@ import React,{useEffect,useState} from "react";
 import axios from "axios";
 import { Pie } from "react-chartjs-2";
 
-const Delayed = ({children, waitBefore=4500}) => {
+const Delayed = ({children, waitBefore=60000}) => {
     const [isShown,setIsShown] = useState(false);
 
-    useEffect(() => {
-        setTimeout(() => {
-            setIsShown(true);
-        },waitBefore);
-    },[waitBefore]);
+    // useEffect(() => {
+    //     // setTimeout(() => {
+    //         setIsShown(true);
+    //     // },waitBefore);
+    // },[]);
 
     return isShown ? children : null;
 }
@@ -66,9 +66,9 @@ const Userchart = () => {
         console.log(username,calories);    
     }
 
-    useEffect(() => {
-        getData();
-    },[]);
+    // useEffect(() => {
+    //     getData();
+    // },[]);
     
     return (
         <>
