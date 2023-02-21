@@ -10,7 +10,7 @@ router.route("/").get((req,res) => {
 });
 
 
-router.route("/add").post((req,res) => {
+router.route("/create").post((req,res) => {
     let username = req.body.username;
     let description = req.body.description;
     let calories = Number(req.body.calories);

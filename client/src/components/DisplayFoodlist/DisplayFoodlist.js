@@ -48,16 +48,16 @@ const DisplayFood = () => {
       });
   };
 
-    // useEffect(async() => {
-    //    await axios
-    //        .get("http://localhost:5000/calorie/")
-    //        .then((res) => {
-    //         setFoods(res.data);
-    //        })
-    //        .catch((err) => {
-    //            console.log(err);
-    //        });
-    // },[]);
+    useEffect(() => {
+        axios
+           .get("http://localhost:5000/calorie/")
+           .then((res) => {
+            setFoods(res.data);
+           })
+           .catch((err) => {
+               console.log(err);
+           });
+    },[]);
 
     const deleteMeal = (id) => {
         axios

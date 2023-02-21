@@ -57,9 +57,9 @@ const Caloriechart = () => {
             }); 
     }
 
-    // useEffect(() => {
-    //     getData();
-    // },[]);
+    useEffect(() => {
+        getData();
+    },[]);
 
     return (
         <>

@@ -16,22 +16,22 @@ const Addfood = () => {
     const userInputRef = useRef("userInput");
 
 
-    useEffect(() => {
+    // useEffect(() => {
       
-     axios
-      .get("http://localhost:5000/users/")
-      .then((res) => {
-          if(res.data.length > 0){
-            console.log(res.data);
-            setUsers(res.data.map((user) => user.username));
-            setUsername(res.data[0].username);
-          }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    //  axios
+    //   .get("http://localhost:5000/users/")
+    //   .then((res) => {
+    //       if(res.data.length > 0){
+    //         console.log(res.data);
+    //         setUsers(res.data.map((user) => user.username));
+    //         setUsername(res.data[0].username);
+    //       }
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
 
-    }, [])
+    // }, [])
     
 
 
@@ -65,7 +65,7 @@ const Addfood = () => {
         console.log(meal);
 
         axios
-        .post("http://localhost:5000/calorie/add", meal)
+        .post("http://localhost:5000/calorie/", meal)
         .then((res) => console.log(res.date));
 
         window.location = "/";

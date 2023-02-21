@@ -9,7 +9,7 @@ router.route("/").get((req,res) => {
 });
 
 
-router.route("/add").post((req,res) => {
+router.route("/users").post((req,res) => {
     let username = req.body.username;
 
     let adduser = new User({
